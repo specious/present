@@ -1,0 +1,140 @@
+/*
+ * Code written in Stylus
+ *   http://learnboost.github.io/stylus/
+ */
+
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+box-shadow(args)
+  -webkit-box-shadow args
+  -moz-box-shadow args
+  -o-box-shadow args
+  box-shadow args
+
+#info-window
+  background #5e5e5e
+  color #fff
+  border 1px solid #ccc
+  box-shadow 3px 3px 3px rgba(0,0,0,0.75)
+  min-height 10px
+  top 10px
+  left 50%
+  padding 21px
+  padding-left 16px
+  position absolute
+  z-index 9999
+  #content
+    margin-right 19px
+    position absolute
+    bottom 0
+  .selectable
+    &::selection
+      background-color #c5a11b
+    &::-moz-selection
+      background-color #c5a11b
+  .close
+    width 24px
+    height 24px
+    // background-image url('../gfx/box-close.png')
+    // background-size 100%
+    top 4px
+    right 4px
+    color #111
+    cursor pointer
+    display block
+    position absolute
+#contact-form
+  width 100%
+  min-width 260px
+  h1
+    color #fff
+    font-size 26px
+    font-weight normal
+    margin-top 0.2em
+    margin-bottom 0.4em
+    margin-left -0.134em
+  h2
+    color #fff
+    font 14px/1.5 Arial,sans-serif
+    font-style italic
+    margin-top 0
+    margin-bottom 0.6em
+  label
+    color #fff
+    font 12px/1.5 Arial,sans-serif
+    font-size 12px
+    display block
+  textarea
+    height 91px
+    resize none
+  #submit
+    &.error
+      color white
+      background-color red
+  #success
+    text-align center
+    display none
+    #text
+      font-family Arial
+      font-size 16px
+      font-weight bold
+      margin 0
+    img
+      margin-top 0.6em
+      display inline-block
+  ::-webkit-input-placeholder
+    color #c5a11b
+    font-style italic
+  input
+    &:focus
+      &::-webkit-input-placeholder
+        color #9a8128
+  ::-moz-placeholder
+    color #494022
+    font-style italic
+  :-moz-placeholder
+    color #494022
+    font-style italic
+  :-ms-input-placeholder
+    color #494022
+    font-style italic
+  input:not([type="submit"])
+  textarea
+    width 98%
+    background #3d3d3d
+    border 1px solid #10100f
+    font-size 12px
+    margin-bottom 5px
+    padding 4px
+  input:not([type="submit"]):focus
+  textarea:focus
+    background linear-gradient(bottom, #3d3d3d, #414141)
+    border 1px solid #504211
+  input:required
+  textarea:required
+    -webkit-box-shadow none
+    -moz-box-shadow none
+    -o-box-shadow none
+    box-shadow none
+.form-button
+  width 100px
+  height 23px
+  background-color #3a2e03
+  color #fff
+  border none
+  border-radius 8px
+  padding 0
+  display block
+  cursor pointer
+  &:hover
+    color #000
+    background #b89a2e
+    border 1px solid #8f7000
+  &:active
+    position relative
+    top 1px
+  &:focus
+    color #f6cc37
+    border 1px solid #f6cc37
+    outline none
