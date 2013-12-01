@@ -56,7 +56,7 @@ function contactFormSubmitEnable( container ) {
         type: form.attr('method'),
         data: form.serialize(),
         success: function() {
-          var header = container.children('h1, h2');
+          var header = container.children('h1');
           header.hide();
           form.hide();
           successBox.show();
@@ -89,14 +89,8 @@ function contactFormSubmitEnable( container ) {
   } );
 }
 
-function contactFormShow() {
-  infoShow( 'contact.html', '#contact-form', 267, 323, function( content ) {
-    content.find('#name').focus();
-    contactFormSubmitEnable( content );
-    arrowKeysEnabled = false;
-  } );
+function onContactFormShow( content ) {
+  content.find('#name').focus();
+  contactFormSubmitEnable( content );
+  arrowKeysEnabled = false;
 }
-
-$(function() {
-  $('#hire').click( contactFormShow )
-})
