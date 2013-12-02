@@ -92,7 +92,7 @@ $(function() {
 
   // Close dialog when clicked outside
   $('body').click( function( e ) {
-    if( infoWindowIsOpen && !($(e.target).is('#info-window') || $(e.target).closest('#info-window').length ) )
+    if( infoWindowIsOpen && !($(e.target).is('#info-window') || $(e.target).closest('#info-window').length) )
       infoWindowClose();
   } );
 })

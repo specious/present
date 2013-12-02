@@ -149,7 +149,14 @@ $projects = array(
     </div>
   </div>
   <div id="footer">
-    Designed and programmed by Ildar Sagdejev &copy; 2013
+    <div id="logos">
+      <img src="gfx/logos/jquery.png">
+      <img src="gfx/logos/html5.png">
+      <img src="gfx/logos/css3.png">
+    </div>
+    <p>
+      Designed and programmed by Ildar Sagdejev &copy; 2013
+    </p>
   </div>
   <script src="js/lib/jquery.js"></script>
   <script src="js/info.js"></script>
