@@ -14,10 +14,10 @@
     <h1>Ildar Sagdejev</h1>
     <h2>Web ninja</h2>
     <div id="menu">
-      <div class="" id="about">
+      <div id="about">
         About Me
       </div>
-      <div class="" id="hire">
+      <div id="hire">
         Hire Me
       </div>
     </div>
@@ -125,7 +125,10 @@ $projects = array(
 <?php foreach( $projects as $p ): ?>
       <div class="project">
         <a href="<?php echo $p['url'] ?>" target="_blank">
-          <img class="cover" src="gfx/projects/<?php echo $p['cover'] ?>" alt="<?php echo $p['name'] ?>">
+          <img class="cover" src="gfx/cover-placeholder.jpg" data-src="gfx/projects/<?php echo $p['cover'] ?>" alt="<?php echo $p['name'] ?>">
+          <noscript>
+            <img class="cover" src="gfx/projects/<?php echo $p['cover'] ?>" alt="<?php echo $p['name'] ?>">
+          </noscript>
         </a>
         <div class="info">
           <p class="name">
@@ -150,15 +153,16 @@ $projects = array(
   </div>
   <div id="footer">
     <div id="logos">
-      <img src="gfx/logos/jquery.png">
-      <img src="gfx/logos/html5.png">
-      <img src="gfx/logos/css3.png">
+      <img src="gfx/logos/jquery.png" alt="jQuery">
+      <img src="gfx/logos/html5.png" alt="HTML5">
+      <img src="gfx/logos/css3.png" alt="CSS3">
     </div>
     <p>
       Designed and programmed by Ildar Sagdejev &copy; 2013
     </p>
   </div>
   <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/jquery.unveil.js"></script>
   <script src="js/info.js"></script>
   <script src="js/contact.js"></script>
   <script>
@@ -169,6 +173,7 @@ $projects = array(
       $('#hire').click( function() {
         infoShow( 'contact.html', '#contact-content', 267, 323, onContactFormShow )
       } )
+      $(".cover").unveil()
     })
   </script>
 </body>
