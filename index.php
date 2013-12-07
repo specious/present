@@ -109,7 +109,7 @@ $projects = array(
         </a>
       </li>
       <li>
-        <a class="wikimedia" href="http://commons.wikimedia.org/wiki/User:Specious" target="_blank" title="Contributions to mankind">
+        <a class="wikimedia" href="http://commons.wikimedia.org/wiki/User:Specious" target="_blank" title="Contributions&nbsp;to&nbsp;mankind">
         </a>
       </li>
       <li>
@@ -173,7 +173,18 @@ $projects = array(
       $('#hire').click( function() {
         infoShow( 'contact.html', '#contact-content', 267, 323, onContactFormShow )
       } )
-      $(".cover").unveil()
+
+      $('#links li').each( function() {
+        var caption = $(this).append('<span class="link-text">' + $(this).find('a').attr('title') + '</span>').find('span')[0]
+
+        $(this).find('a').hover( function() {
+          $(caption).stop( true ).css( 'opacity', '1' )
+        }, function() {
+          $(caption).fadeTo( 333, 0 );
+        } )
+      } )
+
+      $('.cover').unveil()
     })
   </script>
 </body>
