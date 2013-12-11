@@ -13,6 +13,7 @@
   <div id="header">
     <h1>Ildar Sagdejev</h1>
     <h2>Web ninja</h2>
+    <img id="qr-code" src="gfx/qr-code.png">
     <div id="menu">
       <div id="about">
         About Me
@@ -163,6 +164,7 @@ $projects = array(
   </div>
   <script src="js/lib/jquery.js"></script>
   <script src="js/lib/jquery.unveil.js"></script>
+  <script src="js/lib/zoomerang.js"></script>
   <script src="js/info.js"></script>
   <script src="js/contact.js"></script>
   <script>
@@ -183,6 +185,11 @@ $projects = array(
           $(caption).fadeTo( 333, 0 );
         } )
       } )
+
+      Zoomerang.config( {
+        bgColor: '#121212',
+        bgOpacity: 0.6
+      } ).listen('#qr-code')
 
       $('.cover').unveil()
     })

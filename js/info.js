@@ -1,6 +1,8 @@
-//
-// Info pop-up dialog
-//
+/*
+ * Ajax pop-up dialog
+ *
+ * Code by Ildar Sagdejev ( http://www.tknomad.com )
+ */
 
 var infoWindowIsOpen = false;
 
