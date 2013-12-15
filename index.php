@@ -186,10 +186,20 @@ $projects = array(
         } )
       } )
 
-      Zoomerang.config( {
-        bgColor: '#121212',
-        bgOpacity: 0.6
-      } ).listen('#qr-code')
+      //
+      // Due to an unfortunate bug in Android 2.2 - 2.3, the transform
+      // that Zoomerang performs does not render correctly.
+      //
+      // https://code.google.com/p/android/issues/detail?id=12451
+      //
+      if( /Android 2.[23]/.test( navigator.userAgent ) ) {
+        $('#qr-code').wrap('<a href="gfx/qr-code.png"/>')
+      } else {
+        Zoomerang.config( {
+          bgColor: '#121212',
+          bgOpacity: 0.6
+        } ).listen('#qr-code')
+      }
 
       $('.cover').unveil()
     })
