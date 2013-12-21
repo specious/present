@@ -13,7 +13,7 @@
   <div id="header">
     <h1>Ildar Sagdejev</h1>
     <h2>Web ninja</h2>
-    <img id="qr-code" src="gfx/qr-code.png">
+    <img id="qr-code" src="gfx/qr-code.png" alt="QR Code">
     <div id="menu">
       <div id="about">
         About Me
@@ -187,12 +187,15 @@ $projects = array(
       } )
 
       //
-      // Due to an unfortunate bug in Android 2.2 - 2.3, the transform
-      // that Zoomerang performs does not render correctly.
+      // Due to an unfortunate bug in Android 2.2 - 2.3 stock browser,
+      // the transform that Zoomerang performs does not render correctly.
+      //
+      // UC Browser does fine though!
       //
       // https://code.google.com/p/android/issues/detail?id=12451
       //
-      if( /Android 2.[23]/.test( navigator.userAgent ) ) {
+      if( /Android 2.[23]/.test( navigator.userAgent )
+          && !/UCBrowser/.test( navigator.userAgent ) ) {
         $('#qr-code').wrap('<a href="gfx/qr-code.png"/>')
       } else {
         Zoomerang.config( {
