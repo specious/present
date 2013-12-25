@@ -170,7 +170,7 @@ $projects = array(
   <script>
     $(function() {
       $('#about').click( function() {
-        infoShow( 'about.html', '#about-content', 420, 160 )
+        infoShow( 'about.html', '#about-content', 420, 240 )
       } )
       $('#hire').click( function() {
         infoShow( 'contact.html', '#contact-content', 267, 323, onContactFormShow )
