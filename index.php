@@ -62,8 +62,7 @@ $projects = array(
     'type' => 'Game of chance',
     'cover' => 'iceball-keno.png',
     'url' => 'http://www.youtube.com/watch?v=zGuukS-Jex0',
-    'job' => 'Programming',
-    'credits' => 'Graphics by <a href="mailto:amyrlin@gmail.com">Jeana Routh</a>'
+    'job' => 'Programming'
   ),
   array(
     'name' => 'American Pride',
@@ -142,11 +141,13 @@ $projects = array(
           <p class="job">
             &#187; <?php echo $p['job'] ?> &#171;
           </p>
-<?php if( $p['credits'] != null ): ?>
           <p class="credits">
+<?php if( $p['credits'] != null ): ?>
             <?php echo $p['credits'] . "\n" ?>
-          </p>
+<?php else: ?>
+            &nbsp;
 <?php endif ?>
+          </p>
         </div>
       </div>
 <?php endforeach ?>
