@@ -12,19 +12,37 @@
 <body>
   <div id="header">
     <h1>Ildar Sagdejev</h1>
-    <h2>Web ninja</h2>
+    <h2>Web Ninja For Hire</h2>
     <img id="qr-code" src="gfx/qr-code.png" alt="QR Code">
     <div id="menu">
       <div id="about">
-        About Me
+        What I do
       </div>
       <div id="hire">
-        Hire Me
+        Hire me!
       </div>
     </div>
   </div>
 <?php
-$projects = array(
+$projects["Recent websites"] = array(
+  array(
+    'name' => 'Julemagne.com',
+    'type' => 'Website - Fine art',
+    'cover' => 'julemagne.png',
+    'url' => 'http://www.julemagne.com/',
+    'job' => 'Design and programming',
+    'credits' => 'Art and graphics by <a href="http://twitter.com/julemagne">Julie David</a>'
+  ),
+  array(
+    'name' => 'Professional Mortuary',
+    'type' => 'Website - Funeral service',
+    'cover' => 'pms-nc.png',
+    'url' => 'http://www.promortuary.com/',
+    'job' => 'Design and programming',
+    'credits' => 'Embalming by <a href="http://www.promortuary.com/">William Lum</a>'
+  )
+);
+$projects["Games"] = array(
   array(
     'name' => 'Wheel Deal',
     'type' => 'Game of chance',
@@ -79,24 +97,8 @@ $projects = array(
     'url' => 'http://www.youtube.com/watch?v=KGXQho0P9_U',
     'job' => 'Programming',
     'credits' => 'Graphics by <a href="http://www.figure8tech.com/">Figure 8 art team</a>'
-  ),
-  array(
-    'name' => 'Julemagne.com',
-    'type' => 'Website - Fine art',
-    'cover' => 'julemagne.png',
-    'url' => 'http://www.julemagne.com/',
-    'job' => 'Design and programming',
-    'credits' => 'Art and graphics by <a href="http://twitter.com/julemagne">Julie David</a>'
-  ),
-  array(
-    'name' => 'Professional Mortuary of NC',
-    'type' => 'Website - Funeral service',
-    'cover' => 'pms-nc.png',
-    'url' => 'http://www.promortuary.com/',
-    'job' => 'Design and programming',
-    'credits' => 'Embalming by <a href="http://www.promortuary.com/">William Lum</a>'
   )
-)
+);
 ?>
   <div id="content">
     <ul id="links">
@@ -109,7 +111,7 @@ $projects = array(
         </a>
       </li>
       <li>
-        <a class="wikimedia" href="http://commons.wikimedia.org/wiki/User:Specious" target="_blank" title="Contributions&nbsp;to&nbsp;mankind">
+        <a class="wikimedia" href="http://commons.wikimedia.org/wiki/User:Specious" target="_blank" title="Contributions to mankind">
         </a>
       </li>
       <li>
@@ -121,8 +123,10 @@ $projects = array(
         </a>
       </li>
     </ul>
-    <div id="projects">
-<?php foreach( $projects as $p ): ?>
+<?php foreach( $projects as $category => $page ): ?>
+    <div class="page">
+      <h1><?php echo $category ?></h1>
+<?php foreach( $projects[$category] as $p ): ?>
       <div class="project">
         <a href="<?php echo $p['url'] ?>" target="_blank">
           <img class="cover" src="gfx/cover-placeholder.jpg" data-src="gfx/projects/<?php echo $p['cover'] ?>" alt="<?php echo $p['name'] ?>">
@@ -150,8 +154,9 @@ $projects = array(
           </p>
         </div>
       </div>
-<?php endforeach ?>
+<?php endforeach /* project */ ?>
     </div>
+<?php endforeach /* page */ ?>
   </div>
   <div id="footer">
     <div id="logos">
@@ -159,8 +164,8 @@ $projects = array(
       <img src="gfx/logos/html5.png" alt="HTML5">
       <img src="gfx/logos/css3.png" alt="CSS3">
     </div>
-    <p>
-      Designed and programmed by Ildar Sagdejev &copy; 2013
+    <p id="copyright">
+      Designed and programmed by Ildar Sagdejev &copy; 2014
     </p>
   </div>
   <script src="js/lib/jquery.js"></script>
@@ -171,7 +176,7 @@ $projects = array(
   <script>
     $(function() {
       $('#about').click( function() {
-        infoShow( 'about.html', '#about-content', 420, 240 )
+        infoShow( 'about.html', '#about-content', 420, 212 )
       } )
       $('#hire').click( function() {
         infoShow( 'contact.html', '#contact-content', 267, 323, onContactFormShow )

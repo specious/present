@@ -16,7 +16,7 @@ function contactFormSubmitEnable( container ) {
       fields = form.find('input[type!="submit"],textarea'),
       btnSubmit = form.find('[type="submit"]');
 
-  // 
+  //
   // An invalid HTML5 form element will not trigger a form submit event,
   // so we intercept the submit button click.
   //
@@ -30,7 +30,7 @@ function contactFormSubmitEnable( container ) {
       // If built-in HTML5 validity checking is supported, all is easy
       if( this.validity && !this.validity.valid )
         valid = false;
-      
+
       if( valid && this.hasAttribute('required') )
         if( value == '' )
           valid = false;
