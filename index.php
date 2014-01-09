@@ -103,23 +103,23 @@ $projects["Games"] = array(
   <div id="content">
     <ul id="links">
       <li>
-        <a class="fb" href="http://fb.me/tknomad" target="_blank" title="Life">
+        <a class="fb" href="http://fb.me/tknomad" target="_blank" title="My public diary">
         </a>
       </li>
       <li>
-        <a class="twitter" href="http://twitter.com/tknomad" target="_blank" title="News">
+        <a class="twitter" href="http://twitter.com/tknomad" target="_blank" title="Keep up with me">
         </a>
       </li>
       <li>
-        <a class="wikimedia" href="http://commons.wikimedia.org/wiki/User:Specious" target="_blank" title="Contributions to mankind">
+        <a class="wikimedia" href="http://commons.wikimedia.org/wiki/User:Specious" target="_blank" title="My contributions to mankind">
         </a>
       </li>
       <li>
-        <a class="github" href="http://github.com/specious" target="_blank" title="Code">
+        <a class="github" href="http://github.com/specious" target="_blank" title="Look at my open source code">
         </a>
       </li>
       <li>
-        <a class="flickr" href="http://www.flickr.com/photos/the-specious" target="_blank" title="Photography">
+        <a class="flickr" href="http://www.flickr.com/photos/the-specious" target="_blank" title="Enjoy my photography">
         </a>
       </li>
     </ul>
@@ -183,9 +183,10 @@ $projects["Games"] = array(
       } )
 
       $('#links li').each( function() {
-        var caption = $(this).append('<span class="link-text">' + $(this).find('a').attr('title') + '</span>').find('span')[0]
+        var link = $(this).children('a')
+        var caption = $(this).append('<span class="link-text">' + link.attr('title') + '</span>').children('span')[0]
 
-        $(this).find('a').hover( function() {
+        link.removeAttr('title').hover( function() {
           $(caption).stop( true ).css( 'opacity', '1' )
         }, function() {
           $(caption).fadeTo( 333, 0 );
