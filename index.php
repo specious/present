@@ -160,9 +160,15 @@ $projects["Games"] = array(
   </div>
   <div id="footer">
     <div id="logos">
-      <img src="gfx/logos/jquery.png" alt="jQuery">
-      <img src="gfx/logos/html5.png" alt="HTML5">
-      <img src="gfx/logos/css3.png" alt="CSS3">
+      <a href="http://jquery.com/" target="_blank">
+        <img src="gfx/logos/jquery.png" alt="jQuery">
+      </a>
+      <a href="http://html5please.com/" target="_blank">
+        <img src="gfx/logos/html5.png" alt="HTML5">
+      </a>
+      <a href="http://css3please.com/" target="_blank">
+        <img src="gfx/logos/css3.png" alt="CSS3">
+      </a>
     </div>
     <p id="copyright">
       Designed and programmed by Ildar Sagdejev &copy; 2014
