@@ -57,6 +57,8 @@ body
   color white
   text-align center
   margin 0
+a
+  text-decoration none
 #header
   h1, h2
     text-shadow 1px 2px 2px black
@@ -73,16 +75,18 @@ body
 #qr-code
   width 70px
   border 3px #756e6e solid
-  position absolute
+  position fixed
   top 33px
   right 15px
   cursor pointer
+  z-index 9999
 #menu
   color #e0e0e0
   margin 6px auto
-  position absolute
+  position fixed
   top 132px
   right 0
+  z-index 9999
   div
     font-family BitstreamVeraSans
     font-size 22px
@@ -92,11 +96,15 @@ body
     border-left 1px solid #1f1e1e
     border-bottom 1px solid #4d4d4d
     border-radius 13px 0 0 13px
-    background-color rgba(0, 0, 0, 0.32)
+    background-color rgba(0, 0, 0, 0.52)
     cursor pointer
     &:hover
       color #fafafa
-      background-color rgba(30, 30, 30, 0.2)
+      background-color rgba(0, 0, 0, 0.3)
+      border-color #777
+@media (max-width: 630px)
+  #qr-code, #menu
+    position absolute
 #links
   box-shadow 0 0 5px rgba(0, 0, 0, 0.6), 0 0 0 1px #000, inset 0 1px 0 rgba(255, 255, 255, 0.2)
   background linear-gradient(top, #434343, #0D0D0D)
@@ -162,8 +170,8 @@ body
     font-size 34px
     text-shadow 3px 4px 4px black
     text-decoration underline
-    margin-top 21px
-    margin-bottom 0
+    margin-top 32px
+    margin-bottom 7px
 .project
   width 40%
   max-width 800px
@@ -190,7 +198,6 @@ body
     vertical-align bottom
     a
       color #888888
-      text-decoration none
       &:hover
         color #ddd
     p

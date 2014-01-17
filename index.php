@@ -10,18 +10,18 @@
   <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
+  <img id="qr-code" src="gfx/qr-code.png" alt="QR Code">
+  <div id="menu">
+    <div id="about">
+      What I do
+    </div>
+    <div id="hire">
+      Hire me!
+    </div>
+  </div>
   <div id="header">
     <h1>Ildar Sagdejev</h1>
     <h2>Web Ninja For Hire</h2>
-    <img id="qr-code" src="gfx/qr-code.png" alt="QR Code">
-    <div id="menu">
-      <div id="about">
-        What I do
-      </div>
-      <div id="hire">
-        Hire me!
-      </div>
-    </div>
   </div>
 <?php
 $projects["Recent websites"] = array(
