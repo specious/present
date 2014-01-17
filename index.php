@@ -158,7 +158,7 @@ $projects["Games"] = array(
     </div>
 <?php endforeach /* page */ ?>
   </div>
-  <div id="footer">
+  <div>
     <div id="logos">
       <a href="http://jquery.com/" target="_blank">
         <img src="gfx/logos/jquery.png" alt="jQuery">

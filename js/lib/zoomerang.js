@@ -74,8 +74,8 @@
 
     function sniffTransition () {
         var ret   = {},
-            trans = ['transition', 'webkitTransition', 'mozTransition'],
-            tform = ['transform', 'webkitTransform', 'mozTransform'],
+            trans = ['webkitTransition', 'transition', 'mozTransition'],
+            tform = ['webkitTransform', 'transform', 'mozTransform'],
             end   = {
                 'transition'       : 'transitionend',
                 'mozTransition'    : 'transitionend',
@@ -215,7 +215,7 @@
 
         close: function () {
 
-            if (!shown) return
+            if (!shown || lock) return
             lock = true
 
             var p  = placeholder.getBoundingClientRect(),
