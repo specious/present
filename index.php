@@ -31,7 +31,7 @@ $projects["Recent websites"] = array(
     'cover' => 'julemagne.png',
     'url' => 'http://www.julemagne.com/',
     'job' => 'Design and programming',
-    'credits' => 'Art and graphics by <a href="http://twitter.com/julemagne">Julie David</a>'
+    'credits' => 'Art and graphics by <a href="http://twitter.com/julemagne" target="_blank">Julie David</a>'
   ),
   array(
     'name' => 'Professional Mortuary',
@@ -39,7 +39,7 @@ $projects["Recent websites"] = array(
     'cover' => 'pms-nc.png',
     'url' => 'http://www.promortuary.com/',
     'job' => 'Design and programming',
-    'credits' => 'Embalming by <a href="http://www.promortuary.com/">William Lum</a>'
+    'credits' => 'Embalming by <a href="http://www.promortuary.com/" target="_blank">William Lum</a>'
   )
 );
 $projects["Games"] = array(
@@ -47,56 +47,56 @@ $projects["Games"] = array(
     'name' => 'Wheel Deal',
     'type' => 'Game of chance',
     'cover' => 'wheel-deal.png',
-    'url' => 'http://www.youtube.com/watch?v=-F8m-aYZBkg',
+    'url' => 'gfx/projects/wheel-deal.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.figure8tech.com/">Figure 8 art team</a>'
+    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
   ),
   array(
     'name' => 'Lucky\'s Loot',
     'type' => 'Game of chance',
     'cover' => 'lucky-loot.png',
-    'url' => 'http://www.youtube.com/watch?v=ubT1trmd7Ts',
+    'url' => 'gfx/projects/lucky-loot.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.figure8tech.com/">Figure 8 art team</a>'
+    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
   ),
   array(
     'name' => 'Crazy Eights',
     'type' => 'Game of chance',
     'cover' => 'crazy-eights.png',
-    'url' => 'http://www.youtube.com/watch?v=6lfZUDqg9FY',
+    'url' => 'gfx/projects/crazy-eights.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.figure8tech.com/">Figure 8 art team</a>'
+    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
   ),
   array(
     'name' => 'Lucky Lager',
     'type' => 'Game of chance',
     'cover' => 'lucky-lager.png',
-    'url' => 'http://www.youtube.com/watch?v=pUSbuGbLMhk',
+    'url' => 'gfx/projects/lucky-lager.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.figure8tech.com/">Figure 8 art team</a>'
+    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
   ),
   array(
     'name' => 'Iceball Keno',
     'type' => 'Game of chance',
     'cover' => 'iceball-keno.png',
-    'url' => 'http://www.youtube.com/watch?v=zGuukS-Jex0',
+    'url' => 'gfx/projects/iceball-keno.png',
     'job' => 'Programming'
   ),
   array(
     'name' => 'American Pride',
     'type' => 'Game of chance',
     'cover' => 'pride.png',
-    'url' => 'http://www.youtube.com/watch?v=shgkRHHSdW0',
+    'url' => 'gfx/projects/pride.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.figure8tech.com/">Figure 8 art team</a>'
+    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
   ),
   array(
     'name' => 'Deuces Wild',
     'type' => 'Game of chance',
     'cover' => 'deuces-wild.png',
-    'url' => 'http://www.youtube.com/watch?v=KGXQho0P9_U',
+    'url' => 'gfx/projects/deuces-wild.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.figure8tech.com/">Figure 8 art team</a>'
+    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
   )
 );
 ?>
