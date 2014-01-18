@@ -6,12 +6,13 @@
  */
 
 var isEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+var isBusy = false;
 
 function flashInput( element ) {
   $(element).stop( true ).fadeTo( 160, 0.6 ).fadeTo( 200, 1 );
 }
 
-function contactFormSubmitEnable( container ) {
+function contactFormEnable( container ) {
   var form = container.find('form'),
       fields = form.find('input[type!="submit"],textarea'),
       btnSubmit = form.find('[type="submit"]');
@@ -21,6 +22,9 @@ function contactFormSubmitEnable( container ) {
   // so we intercept the submit button click.
   //
   btnSubmit.bind( 'click', function() {
+    if( isBusy )
+      return false;
+
     var valid = true;
 
     fields.each( function() {
@@ -46,10 +50,10 @@ function contactFormSubmitEnable( container ) {
       }
     } );
 
-    if( valid && !infoWindowBusy ) {
-      var successBox = container.find('#success');
+    if( valid ) {
+      var success = container.find('#success');
       btnSubmit.attr( 'value', 'Submitting' );
-      infoWindowBusy = true;
+      isBusy = true;
 
       $.ajax( {
         url: form.attr('action'),
@@ -59,17 +63,8 @@ function contactFormSubmitEnable( container ) {
           var header = container.children('h1');
           header.hide();
           form.hide();
-          successBox.show();
-          arrowKeysEnabled = true;
-
-          $('#info-window').delay( 1300 ).fadeOut( 1800, function() {
-            form.get(0).reset();
-            btnSubmit.attr( 'value', 'Send' );
-            successBox.hide();
-            header.show();
-            form.show();
-            infoWindowBusy = false;
-          } );
+          success.show();
+          isBusy = false;
         },
         error: function( request, status, httpError ) {
           btnSubmit.addClass( 'error' );
@@ -78,7 +73,7 @@ function contactFormSubmitEnable( container ) {
           setTimeout( function() {
             btnSubmit.removeClass( 'error' );
             btnSubmit.attr( 'value', 'Send' );
-            infoWindowBusy = false;
+            isBusy = false;
           }, 1300 );
         }
       } );
@@ -87,10 +82,4 @@ function contactFormSubmitEnable( container ) {
     // Prevent automatic submission and default error messages
     return false;
   } );
-}
-
-function onContactFormShow( content ) {
-  content.find('#name').focus();
-  contactFormSubmitEnable( content );
-  arrowKeysEnabled = false;
 }

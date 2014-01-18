@@ -7,7 +7,6 @@
   <meta charset="UTF-8">
   <title>Ildar Sagdejev - Web ninja for hire</title>
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
   <img id="qr-code" src="gfx/qr-code.png" alt="QR Code">
@@ -15,9 +14,9 @@
     <div id="about">
       What I do
     </div>
-    <div id="hire">
+    <a id="hire" href="#contact">
       Hire me!
-    </div>
+    </a>
   </div>
   <div id="header">
     <h1>Ildar Sagdejev</h1>
@@ -49,7 +48,7 @@ $projects["Games"] = array(
     'cover' => 'wheel-deal.png',
     'url' => 'gfx/projects/wheel-deal.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
+    'credits' => 'Graphics by Figure 8 Technologies'
   ),
   array(
     'name' => 'Lucky\'s Loot',
@@ -57,7 +56,7 @@ $projects["Games"] = array(
     'cover' => 'lucky-loot.png',
     'url' => 'gfx/projects/lucky-loot.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
+    'credits' => 'Graphics by Figure 8 Technologies'
   ),
   array(
     'name' => 'Crazy Eights',
@@ -65,7 +64,7 @@ $projects["Games"] = array(
     'cover' => 'crazy-eights.png',
     'url' => 'gfx/projects/crazy-eights.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
+    'credits' => 'Graphics by Figure 8 Technologies'
   ),
   array(
     'name' => 'Lucky Lager',
@@ -73,7 +72,7 @@ $projects["Games"] = array(
     'cover' => 'lucky-lager.png',
     'url' => 'gfx/projects/lucky-lager.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
+    'credits' => 'Graphics by Figure 8 Technologies'
   ),
   array(
     'name' => 'Iceball Keno',
@@ -88,7 +87,7 @@ $projects["Games"] = array(
     'cover' => 'pride.png',
     'url' => 'gfx/projects/pride.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
+    'credits' => 'Graphics by Figure 8 Technologies'
   ),
   array(
     'name' => 'Deuces Wild',
@@ -96,7 +95,7 @@ $projects["Games"] = array(
     'cover' => 'deuces-wild.png',
     'url' => 'gfx/projects/deuces-wild.png',
     'job' => 'Programming',
-    'credits' => 'Graphics by <a href="http://www.casinovendors.com/vendor/figure-eight-technologies/" target="_blank">Figure 8 Technologies</a>'
+    'credits' => 'Graphics by Figure 8 Technologies'
   )
 );
 ?>
@@ -157,6 +156,24 @@ $projects["Games"] = array(
 <?php endforeach /* project */ ?>
     </div>
 <?php endforeach /* page */ ?>
+    <div id="contact" class="page">
+      <h1>Hire me!</h1>
+      <form action="contact.php" method="post">
+        <label>Your name
+          <input type="text" id="name" name="name" required autofocus>
+        </label>
+        <label>Your e-mail
+          <input type="email" name="email" required>
+        </label>
+        <label>What can I help you with?
+          <textarea name="message" required></textarea>
+        </label>
+        <input type="submit" id="submit" value="Submit">
+      </form>
+      <div id="success">
+        Thanks for your message! I will get back to you soon.
+      </div>
+    </div>
   </div>
   <div>
     <div id="logos">
@@ -181,12 +198,21 @@ $projects["Games"] = array(
   <script src="js/contact.js"></script>
   <script>
     $(function() {
+      function scrollTo( selector, time ) {
+        $('html, body').animate( {
+          scrollTop: $(selector).offset().top
+        }, time || 1000 )
+      }
+
       $('#about').click( function() {
         infoShow( 'about.html', '#about-content', 420, 212 )
       } )
       $('#hire').click( function() {
-        infoShow( 'contact.html', '#contact-content', 267, 323, onContactFormShow )
+        scrollTo( '#contact' )
+        $('#name').focus()
       } )
+
+      contactFormEnable( $('#contact') )
 
       $('#links li').each( function() {
         var link = $(this).children('a')
