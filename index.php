@@ -14,6 +14,12 @@
     <div id="about">
       What I do
     </div>
+    <a href="#websites">
+      Websites
+    </a>
+    <a href="#games">
+      Games
+    </a>
     <a id="hire" href="#contact">
       Hire me!
     </a>
@@ -23,7 +29,8 @@
     <h2>Web Ninja For Hire</h2>
   </div>
 <?php
-$projects["Recent websites"] = array(
+$projects["websites"] = array(
+  "Recent websites",
   array(
     'name' => 'Julemagne.com',
     'type' => 'Website - Fine art',
@@ -41,7 +48,8 @@ $projects["Recent websites"] = array(
     'credits' => 'Embalming by <a href="http://www.promortuary.com/" target="_blank">William Lum</a>'
   )
 );
-$projects["Games"] = array(
+$projects["games"] = array(
+  "Sweepstakes games",
   array(
     'name' => 'Wheel Deal',
     'type' => 'Game of chance',
@@ -123,8 +131,8 @@ $projects["Games"] = array(
       </li>
     </ul>
 <?php foreach( $projects as $category => $page ): ?>
-    <div class="page">
-      <h1><?php echo $category ?></h1>
+    <div id="<?php echo $category ?>" class="page">
+      <h1><?php echo array_shift( $projects[$category] ) ?></h1>
 <?php foreach( $projects[$category] as $p ): ?>
       <div class="project">
         <a href="<?php echo $p['url'] ?>" target="_blank">
@@ -160,7 +168,7 @@ $projects["Games"] = array(
       <h1>Hire me!</h1>
       <form action="contact.php" method="post">
         <label>Your name
-          <input type="text" id="name" name="name" required autofocus>
+          <input type="text" id="name" name="name" required>
         </label>
         <label>Your e-mail
           <input type="email" name="email" required>
@@ -207,9 +215,13 @@ $projects["Games"] = array(
       $('#about').click( function() {
         infoShow( 'about.html', '#about-content', 420, 212 )
       } )
+      $('#menu > a').click( function() {
+        scrollTo( $(this).attr('href') )
+        return false
+      } )
       $('#hire').click( function() {
-        scrollTo( '#contact' )
         $('#name').focus()
+        return false
       } )
 
       contactFormEnable( $('#contact') )
