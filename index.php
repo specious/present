@@ -173,6 +173,20 @@ $projects["games"] = array(
         <label>Your e-mail
           <input type="email" name="email" required>
         </label>
+        <div class="group">
+          <label class="half left">Budget
+            <input type="text" name="budget" placeholder="e.g., $3500">
+          </label>
+          <label class="half right">Start date
+            <select name="start">
+              <option value="1">Within 1 month</option>
+              <option value="1-2" selected>1 - 2 months</option>
+              <option value="2-3">2 - 3 months</option>
+              <option value="3+">3+ months</option>
+            </select>
+          </label>
+        </div>
+        <div style="clear: both"></div>
         <label>What can I help you with?
           <textarea name="message" required></textarea>
         </label>

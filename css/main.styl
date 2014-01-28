@@ -1,6 +1,6 @@
 /*
  * Code written in Stylus
- *   http://learnboost.github.io/stylus/
+ *   Learn more: http://learnboost.github.io/stylus/
  */
 
 @import 'nib/vendor'
@@ -173,7 +173,6 @@ a
     font-family Lobster
     font-size 34px
     text-shadow 3px 4px 4px black
-    text-decoration underline
     margin-top 32px
     margin-bottom 7px
 .project
@@ -248,10 +247,18 @@ a
     color #d6c0c0
     font 16px/1.8 Arial, sans-serif
     text-shadow 2px 2px 1px black
-    margin-top 10px
+    margin-top 12px
     display block
+  @media (min-width: 500px)
+    .group
+      .half
+        width 49%
+      .left
+        float left
+      .right
+        float right
   textarea
-    height 112px
+    height 190px
     resize vertical
   #submit
     margin 0 auto
@@ -263,24 +270,34 @@ a
     margin-top -3px
     margin-bottom 20px
     display none
-  input:not([type="submit"])
-    height 18px
+  input:not([type="submit"]),
+  select
+    height 44px
     display block
     margin 0 auto
   input:not([type="submit"]),
+  select,
   textarea
-    width 98%
+    width 100%
     color #a9a9a9
-    font-family: Quattrocento;
+    font-family Quattrocento
     font-size 20px
     background #3d3d3d
     border 1px solid #10100f
     box-shadow 3px 4px 16px rgba(0, 0, 0, 0.8)
-    margin-bottom 5px
     padding 12px
+    box-sizing border-box // Prevent padding from widening the box: http://stackoverflow.com/q/16388361
+    margin-bottom 5px
     &:focus
       background #424242
       outline none
+  select
+    // Custom styling the select box
+    -webkit-appearance none
+    text-indent 0.01px // Firefox trick: https://gist.github.com/joaocunha/6273016
+    text-overflow ''
+    @media (max-width: 480px)
+      width 100%
   #submit
     background-color #62635e
     color #fff
