@@ -214,7 +214,6 @@ $projects["games"] = array(
     </p>
   </div>
   <script src="js/lib/jquery.js"></script>
-  <script src="js/lib/jquery.unveil.js"></script>
   <script src="js/lib/zoomerang.js"></script>
   <script src="js/info.js"></script>
   <script src="js/contact.js"></script>
@@ -269,7 +268,16 @@ $projects["games"] = array(
         } ).listen('#qr-code')
       }
 
-      $('.cover').unveil()
+      //
+      // Load cover images last
+      //
+      $(window).load( function() {
+        $('.cover').each( function() {
+          var source = this.getAttribute("data-src")
+          if (source)
+            this.setAttribute( "src", source )
+        } )
+      } )
     })
   </script>
 </body>
