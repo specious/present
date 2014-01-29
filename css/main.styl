@@ -294,8 +294,13 @@ a
   select
     // Custom styling the select box
     -webkit-appearance none
-    text-indent 0.01px // Firefox trick: https://gist.github.com/joaocunha/6273016
+    // Trick to remove arrow glyph in Firefox: https://gist.github.com/joaocunha/6273016
+    text-indent 0.01px
     text-overflow ''
+    &:-moz-focusring
+      // Trick to remove dotted inner box in Firefox
+      color transparent
+      text-shadow 0 0 0 #a9a9a9
     @media (max-width: 480px)
       width 100%
   #submit
