@@ -174,10 +174,10 @@ $projects["games"] = array(
           <input type="email" name="email" required>
         </label>
         <div class="group">
-          <label class="half left">Budget
+          <label>Budget
             <input type="text" name="budget" placeholder="e.g., $3500">
           </label>
-          <label class="half right">Start date
+          <label>Start date
             <select name="start">
               <option value="1">Within 1 month</option>
               <option value="1-2" selected>1 - 2 months</option>
