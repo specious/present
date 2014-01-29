@@ -269,14 +269,24 @@ $projects["games"] = array(
       }
 
       //
-      // Load cover images last
+      // Lazy load images
       //
-      $(window).load( function() {
-        $('.cover').each( function() {
-          var source = this.getAttribute("data-src")
-          if (source)
-            this.setAttribute( "src", source )
+      function loadImages( selector ) {
+        $(selector).each( function() {
+          var src = this.getAttribute( "data-src" )
+
+          if( src ) {
+            this.setAttribute( "src", src )
+            this.removeAttribute( "data-src" )
+          }
         } )
+      }
+
+      // First page first
+      loadImages( ".page:first .cover" )
+
+      $(window).load( function() {
+        loadImages( ".cover" )
       } )
     })
   </script>
