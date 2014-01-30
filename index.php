@@ -9,7 +9,7 @@
 <?php endif ?>
   <meta charset="UTF-8">
   <title><?php echo $author ?> - <?php echo $epithet ?></title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="skins/<?php echo $skin ?>/main.css">
 </head>
 <body>
   <img id="avatar" src="<?php echo $avatar['image'] ?>" alt="<?php echo $avatar['title'] ?>">

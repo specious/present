@@ -7,6 +7,7 @@ I decided to share the framework that I have developed for showing off my projec
 * Don't need a database
 * Takes advantage of jQuery but usable without JavaScript
 * Generates very clean HTML
+* Skinnable
 
 ## Mission
 
@@ -22,7 +23,7 @@ Instructions:
 
 * Rename **config-example.php** to **config.php**
 * Edit config.php (it is pretty much self-explanatory)
-* Compile css/*.styl with Stylus
+* Compile CSS with Stylus: `stylus skins/*/*.styl`
 * Host on a PHP server
 
 *Hint:* if you have PHP 5.4 or later you can test by running in the root directory: `php -S 0.0.0.0:8888`

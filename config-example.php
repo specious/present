@@ -1,5 +1,7 @@
 <?php
 
+$skin = 'rouge';
+
 $author  = 'Ildar Sagdejev';
 $epithet = 'Web ninja for hire';
 $footer  = "Designed and programmed by {$author} &copy; 2014";
