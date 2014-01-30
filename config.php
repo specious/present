@@ -22,6 +22,11 @@ $contact = array(
   'start_default' => '1-2'
 );
 
+$avatar = array(
+  'image' => 'gfx/qr-code.png',
+  'title' => 'QR Code'
+);
+
 $links = array(
   'fb' => array(
     'href' => 'http://fb.me/tknomad',

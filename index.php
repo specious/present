@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <img id="qr-code" src="gfx/qr-code.png" alt="QR Code">
+  <img id="avatar" src="<?php echo $avatar['image'] ?>" alt="<?php echo $avatar['title'] ?>">
   <div id="menu">
     <div id="about">
       What I do
@@ -168,12 +168,12 @@
       //
       if( /Android 2.[23]/.test( navigator.userAgent )
           && !/UCBrowser/.test( navigator.userAgent ) ) {
-        $('#qr-code').wrap('<a href="gfx/qr-code.png"/>')
+        $('#avatar').wrap('<a href="<?php echo $avatar['image'] ?>"/>')
       } else {
         Zoomerang.config( {
           bgColor: '#121212',
           bgOpacity: 0.6
-        } ).listen('#qr-code')
+        } ).listen('#avatar')
       }
 
       //
