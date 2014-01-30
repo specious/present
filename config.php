@@ -3,6 +3,7 @@
 $author  = 'Ildar Sagdejev';
 $epithet = 'Web ninja for hire';
 $footer  = "Designed and programmed by {$author} &copy; 2014";
+$comment = 'Programming by Ildar Sagdejev ( http://twitter.com/tknomad )';
 
 $contact = array(
   'title' => 'Hire me!',
@@ -47,6 +48,21 @@ $links = array(
   'flickr' => array(
     'href' => 'http://www.flickr.com/photos/the-specious',
     'title' => 'Enjoy my photography'
+  )
+);
+
+$logos = array(
+  'jQuery' => array(
+    'image' => 'jquery.png',
+    'href' => 'http://jquery.com/'
+  ),
+  'HTML5' => array(
+    'image' => 'html5.png',
+    'href' => 'http://html5please.com/'
+  ),
+  'CSS3' => array(
+    'image' => 'css3.png',
+    'href' => 'http://css3please.com/'
   )
 );
 

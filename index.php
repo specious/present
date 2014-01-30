@@ -2,9 +2,11 @@
 <html lang="en">
 <?php require( 'config.php' ); ?>
 <head>
+<?php if( $comment ): ?>
   <!--
-    Programming by Ildar Sagdejev ( http://twitter.com/tknomad )
+    <?php echo $comment . "\n" ?>
   -->
+<?php endif ?>
   <meta charset="UTF-8">
   <title><?php echo $author ?> - <?php echo $epithet ?></title>
   <link rel="stylesheet" href="css/main.css">
@@ -106,17 +108,15 @@
     </div>
   </div>
   <div>
+<?php if( $logos ): ?>
     <div id="logos">
-      <a href="http://jquery.com/" target="_blank">
-        <img src="gfx/logos/jquery.png" alt="jQuery">
+<?php foreach( $logos as $name => $attr ): ?>
+      <a href="<?php echo $attr['href'] ?>" target="_blank">
+        <img src="gfx/logos/<?php echo $attr['image'] ?>" alt="<?php echo $name ?>">
       </a>
-      <a href="http://html5please.com/" target="_blank">
-        <img src="gfx/logos/html5.png" alt="HTML5">
-      </a>
-      <a href="http://css3please.com/" target="_blank">
-        <img src="gfx/logos/css3.png" alt="CSS3">
-      </a>
+<?php endforeach ?>
     </div>
+<?php endif ?>
     <p id="copyright">
       <?php echo $footer . "\n" ?>
     </p>
