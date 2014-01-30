@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
+<?php require( 'config.php' ); ?>
 <head>
   <!--
     Programming by Ildar Sagdejev ( http://twitter.com/tknomad )
   -->
   <meta charset="UTF-8">
-  <title>Ildar Sagdejev - Web ninja for hire</title>
+  <title><?php echo $author ?> - <?php echo $epithet ?></title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -14,99 +15,19 @@
     <div id="about">
       What I do
     </div>
-    <a href="#websites">
-      Websites
+<?php foreach( $projects as $category => $page ): ?>
+    <a href="#<?php echo $category ?>">
+      <?php echo ucfirst( $category ) . "\n" ?>
     </a>
-    <a href="#games">
-      Games
-    </a>
+<?php endforeach ?>
     <a id="hire" href="#contact">
-      Hire me!
+      <?php echo $contact['title'] . "\n" ?>
     </a>
   </div>
   <div id="header">
-    <h1>Ildar Sagdejev</h1>
-    <h2>Web Ninja For Hire</h2>
+    <h1><?php echo $author ?></h1>
+    <h2><?php echo ucwords( $epithet ) ?></h2>
   </div>
-<?php
-$projects["websites"] = array(
-  "Recent websites",
-  array(
-    'name' => 'Julemagne.com',
-    'type' => 'Website - Fine art',
-    'cover' => 'julemagne.png',
-    'url' => 'http://www.julemagne.com/',
-    'job' => 'Design and programming',
-    'credits' => 'Art and graphics by <a href="http://twitter.com/julemagne" target="_blank">Julie David</a>'
-  ),
-  array(
-    'name' => 'Professional Mortuary',
-    'type' => 'Website - Funeral service',
-    'cover' => 'pms-nc.png',
-    'url' => 'http://www.promortuary.com/',
-    'job' => 'Design and programming',
-    'credits' => 'Embalming by <a href="http://www.promortuary.com/" target="_blank">William Lum</a>'
-  )
-);
-$projects["games"] = array(
-  "Sweepstakes games",
-  array(
-    'name' => 'Wheel Deal',
-    'type' => 'Game of chance',
-    'cover' => 'wheel-deal.png',
-    'url' => 'gfx/projects/wheel-deal.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Lucky\'s Loot',
-    'type' => 'Game of chance',
-    'cover' => 'lucky-loot.png',
-    'url' => 'gfx/projects/lucky-loot.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Crazy Eights',
-    'type' => 'Game of chance',
-    'cover' => 'crazy-eights.png',
-    'url' => 'gfx/projects/crazy-eights.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Lucky Lager',
-    'type' => 'Game of chance',
-    'cover' => 'lucky-lager.png',
-    'url' => 'gfx/projects/lucky-lager.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Iceball Keno',
-    'type' => 'Game of chance',
-    'cover' => 'iceball-keno.png',
-    'url' => 'gfx/projects/iceball-keno.png',
-    'job' => 'Programming'
-  ),
-  array(
-    'name' => 'American Pride',
-    'type' => 'Game of chance',
-    'cover' => 'pride.png',
-    'url' => 'gfx/projects/pride.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Deuces Wild',
-    'type' => 'Game of chance',
-    'cover' => 'deuces-wild.png',
-    'url' => 'gfx/projects/deuces-wild.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  )
-);
-?>
   <div id="content">
     <ul id="links">
       <li>
@@ -165,7 +86,7 @@ $projects["games"] = array(
     </div>
 <?php endforeach /* page */ ?>
     <div id="contact" class="page">
-      <h1>Hire me!</h1>
+      <h1><?php echo $contact['title'] ?></h1>
       <form action="contact.php" method="post">
         <label>Your name
           <input type="text" id="name" name="name" required>
@@ -210,7 +131,7 @@ $projects["games"] = array(
       </a>
     </div>
     <p id="copyright">
-      Designed and programmed by Ildar Sagdejev &copy; 2014
+      <?php echo $footer . "\n" ?>
     </p>
   </div>
   <script src="js/lib/jquery.js"></script>

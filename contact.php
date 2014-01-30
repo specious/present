@@ -1,7 +1,6 @@
 <?php
 
-$SUBMIT_FROM = 'tknomad.com <noreply@tknomad.com>';
-$SUBMIT_TO   = 'specious@gmail.com';
+require( 'config.php' );
 
 if( !isset($_POST) )
   die( 'Quit hacking!' );
@@ -48,8 +47,8 @@ if( empty($message) ){
 }
 
 if( $valid ) {
-  $headers = 'From: ' . $SUBMIT_FROM . "\r\n";
-  $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+  $headers = 'From: ' . $contact['email']['from'] . "\r\n" .
+             'Content-type: text/html; charset=UTF-8' . "\r\n";
 
   $emailbody = <<<EOM
 <p>You have recieved a new message from the enquiries form on your website.</p>
@@ -64,14 +63,13 @@ if( $valid ) {
 </div>
 EOM;
 
-mail( $SUBMIT_TO, 'Web enquiry', $emailbody, $headers );
+  mail( $contact['email']['to'], 'Web enquiry', $emailbody, $headers );
 }
 
 //
 // If not requested via AJAX, redirect back
 //
-if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {
+if( empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest' )
   header('location: ' . $_SERVER['HTTP_REFERER']);
-}
 
 ?>
