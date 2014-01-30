@@ -32,9 +32,10 @@
   </div>
 <?php if( $links ): ?>
   <ul id="links">
-<?php foreach( $links as $class => $attr ): ?>
+<?php foreach( $links as $name => $link ): ?>
     <li>
-      <a class="<?php echo $class ?>" href="<?php echo $attr['href'] ?>" target="_blank" title="<?php echo $attr['title'] ?>">
+      <a href="<?php echo $link['href'] ?>" target="_blank" title="<?php echo $link['title'] ?>">
+        <img src="gfx/link-icons/<?php echo $link['image'] ?>" alt="<?php echo $name ?>">
       </a>
     </li>
 <?php endforeach ?>

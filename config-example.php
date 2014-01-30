@@ -31,24 +31,29 @@ $avatar = array(
 );
 
 $links = array(
-  'fb' => array(
+  'Facebook' => array(
     'href' => 'http://fb.me/tknomad',
+    'image' => 'fb.png',
     'title' => 'Read my public diary'
   ),
-  'twitter' => array(
+  'Twitter' => array(
     'href' => 'http://twitter.com/tknomad',
+    'image' => 'twitter.png',
     'title' => 'Keep up with me'
   ),
-  'wikimedia' => array(
+  'Wikimedia' => array(
     'href' => 'http://commons.wikimedia.org/wiki/User:Specious',
+    'image' => 'wikipedia.png',
     'title' => 'Behold my contributions to mankind'
   ),
-  'github' => array(
+  'GitHub' => array(
     'href' => 'http://github.com/specious',
+    'image' => 'terminal.png',
     'title' => 'Entertain yourself with my open source code'
   ),
-  'flickr' => array(
+  'Flickr' => array(
     'href' => 'http://www.flickr.com/photos/the-specious',
+    'image' => 'camera.png',
     'title' => 'Enjoy my photography'
   )
 );
