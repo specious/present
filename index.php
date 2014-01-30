@@ -84,14 +84,13 @@
         </label>
         <div class="group">
           <label>Budget
-            <input type="text" name="budget" placeholder="e.g., $3500">
+            <input type="text" name="budget"<?php if( $contact['suggest']['budget'] ) echo "placeholder=\"{$contact['suggest']['budget']}\"" ?>>
           </label>
           <label>Start date
             <select name="start">
-              <option value="1">Within 1 month</option>
-              <option value="1-2" selected>1 - 2 months</option>
-              <option value="2-3">2 - 3 months</option>
-              <option value="3+">3+ months</option>
+<?php foreach( $contact['start'] as $key => $value ): ?>
+              <option value="<?php echo $key ?>"<?php if( $key === $contact['start_default'] ) echo ' selected' ?>><?php echo $value ?></option>
+<?php endforeach ?>
             </select>
           </label>
         </div>

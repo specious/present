@@ -9,7 +9,17 @@ $contact = array(
   'email' => array(
     'from' => 'tknomad.com <noreply@tknomad.com>',
     'to' => 'specious@gmail.com'
-  )
+  ),
+  'suggest' => array(
+    'budget' => 'e.g., $3500'
+  ),
+  'start' => array(
+    '1' => 'Within 1 month',
+    '1-2' => '1 - 2 months',
+    '2-3' => '2 - 3 months',
+    '3+' => '3+ months'
+  ),
+  'start_default' => '1-2'
 );
 
 $links = array(
