@@ -28,29 +28,17 @@
     <h1><?php echo $author ?></h1>
     <h2><?php echo ucwords( $epithet ) ?></h2>
   </div>
+<?php if( $links ): ?>
+  <ul id="links">
+<?php foreach( $links as $class => $attr ): ?>
+    <li>
+      <a class="<?php echo $class ?>" href="<?php echo $attr['href'] ?>" target="_blank" title="<?php echo $attr['title'] ?>">
+      </a>
+    </li>
+<?php endforeach ?>
+  </ul>
+<?php endif ?>
   <div id="content">
-    <ul id="links">
-      <li>
-        <a class="fb" href="http://fb.me/tknomad" target="_blank" title="My public diary">
-        </a>
-      </li>
-      <li>
-        <a class="twitter" href="http://twitter.com/tknomad" target="_blank" title="Keep up with me">
-        </a>
-      </li>
-      <li>
-        <a class="wikimedia" href="http://commons.wikimedia.org/wiki/User:Specious" target="_blank" title="My contributions to mankind">
-        </a>
-      </li>
-      <li>
-        <a class="github" href="http://github.com/specious" target="_blank" title="Look at my open source code">
-        </a>
-      </li>
-      <li>
-        <a class="flickr" href="http://www.flickr.com/photos/the-specious" target="_blank" title="Enjoy my photography">
-        </a>
-      </li>
-    </ul>
 <?php foreach( $projects as $category => $page ): ?>
     <div id="<?php echo $category ?>" class="page">
       <h1><?php echo array_shift( $projects[$category] ) ?></h1>

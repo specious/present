@@ -12,6 +12,29 @@ $contact = array(
   )
 );
 
+$links = array(
+  'fb' => array(
+    'href' => 'http://fb.me/tknomad',
+    'title' => 'Read my public diary'
+  ),
+  'twitter' => array(
+    'href' => 'http://twitter.com/tknomad',
+    'title' => 'Keep up with me'
+  ),
+  'wikimedia' => array(
+    'href' => 'http://commons.wikimedia.org/wiki/User:Specious',
+    'title' => 'Behold my contributions to mankind'
+  ),
+  'github' => array(
+    'href' => 'http://github.com/specious',
+    'title' => 'Entertain yourself with my open source code'
+  ),
+  'flickr' => array(
+    'href' => 'http://www.flickr.com/photos/the-specious',
+    'title' => 'Enjoy my photography'
+  )
+);
+
 $projects['websites'] = array(
   'Recent websites',
   array(
