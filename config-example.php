@@ -2,15 +2,15 @@
 
 $skin = 'rouge';
 
-$author  = 'Ildar Sagdejev';
-$epithet = 'Web ninja for hire';
+$author  = 'Awesome Dude';
+$epithet = 'This is what I do';
 $footer  = "Designed and programmed by {$author} &copy; 2014";
 $comment = 'Programming by Ildar Sagdejev ( http://twitter.com/tknomad )';
 
 $contact = array(
   'title' => 'Hire me!',
   'email' => array(
-    'from' => 'tknomad.com <noreply@tknomad.com>',
+    'from' => 'example.com <noreply@example.com>',
     'to' => 'specious@gmail.com'
   ),
   'suggest' => array(
@@ -73,82 +73,78 @@ $logos = array(
   )
 );
 
-$projects['websites'] = array(
-  'Recent websites',
+//
+// Pages
+//
+
+$gallery['photos'] = array(
+  'Photography',
+  array(
+    'name' => 'White Shepherd',
+    'type' => 'People and Animals',
+    'thumb' => 'white-dog.jpg',
+    'url' => 'http://www.flickr.com/photos/the-specious/5416294249/',
+    'sub1' => 'White German Shepherd',
+    'sub2' => 'Canon EOS Rebel XTi'
+  ),
+  array(
+    'name' => 'Pitbull',
+    'type' => 'People and Animals',
+    'thumb' => 'pitbull.jpg',
+    'url' => 'http://www.flickr.com/photos/the-specious/6813093772/',
+    'sub1' => 'Pitbull on Ellebre Creek Trail',
+    'sub2' => 'Canon EOS Rebel XTi'
+  ),
+  array(
+    'name' => 'Chimichanga',
+    'type' => 'Food',
+    'thumb' => 'chimi.jpg',
+    'url' => 'http://www.flickr.com/photos/the-specious/5414440478/',
+    'sub1' => 'Chimichanga with Guacamole',
+    'sub2' => 'Canon EOS Rebel XTi'
+  ),
+  array(
+    'name' => 'Norfolk Southern',
+    'type' => 'Transport',
+    'thumb' => 'train.jpg',
+    'url' => 'http://www.flickr.com/photos/the-specious/5415537575/',
+    'sub1' => '',
+    'sub2' => 'Canon EOS Rebel XTi'
+  ),
+  array(
+    'name' => 'Wild Mushroom',
+    'type' => 'Nature',
+    'thumb' => 'mushroom.jpg',
+    'url' => 'http://www.flickr.com/photos/the-specious/5413834061/',
+    'sub1' => 'Cardioid',
+    'sub2' => 'Canon EOS Rebel XTi'
+  ),
+  array(
+    'name' => 'Swamped by Pigeons',
+    'type' => 'People and Animals',
+    'thumb' => 'pigeons.jpg',
+    'url' => 'http://www.flickr.com/photos/the-specious/5415563709/',
+    'sub1' => 'Dam Square, Amsterdam',
+    'sub2' => 'Canon EOS Rebel XTi'
+  )
+);
+$gallery['websites'] = array(
+  'Websites',
   array(
     'name' => 'Julemagne.com',
     'type' => 'Website - Fine art',
-    'cover' => 'julemagne.png',
+    'thumb' => 'julemagne.png',
     'url' => 'http://www.julemagne.com/',
-    'job' => 'Design and programming',
-    'credits' => 'Art and graphics by <a href="http://twitter.com/julemagne" target="_blank">Julie David</a>'
+    'sub1' => 'Design and programming',
+    'sub2' => 'Art and graphics by <a href="http://twitter.com/julemagne" target="_blank">Julie David</a>'
   ),
   array(
     'name' => 'Professional Mortuary',
     'type' => 'Website - Funeral service',
-    'cover' => 'pms-nc.png',
+    'thumb' => 'pms-nc.png',
     'url' => 'http://www.promortuary.com/',
-    'job' => 'Design and programming',
-    'credits' => 'Embalming by <a href="http://www.promortuary.com/" target="_blank">William Lum</a>'
-  )
-);
-
-$projects['games'] = array(
-  'Sweepstakes games',
-  array(
-    'name' => 'Wheel Deal',
-    'type' => 'Game of chance',
-    'cover' => 'wheel-deal.png',
-    'url' => 'gfx/projects/wheel-deal.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Lucky\'s Loot',
-    'type' => 'Game of chance',
-    'cover' => 'lucky-loot.png',
-    'url' => 'gfx/projects/lucky-loot.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Crazy Eights',
-    'type' => 'Game of chance',
-    'cover' => 'crazy-eights.png',
-    'url' => 'gfx/projects/crazy-eights.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Lucky Lager',
-    'type' => 'Game of chance',
-    'cover' => 'lucky-lager.png',
-    'url' => 'gfx/projects/lucky-lager.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Iceball Keno',
-    'type' => 'Game of chance',
-    'cover' => 'iceball-keno.png',
-    'url' => 'gfx/projects/iceball-keno.png',
-    'job' => 'Programming'
-  ),
-  array(
-    'name' => 'American Pride',
-    'type' => 'Game of chance',
-    'cover' => 'pride.png',
-    'url' => 'gfx/projects/pride.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
-  ),
-  array(
-    'name' => 'Deuces Wild',
-    'type' => 'Game of chance',
-    'cover' => 'deuces-wild.png',
-    'url' => 'gfx/projects/deuces-wild.png',
-    'job' => 'Programming',
-    'credits' => 'Graphics by Figure 8 Technologies'
+    'sub1' => 'Design and programming',
+    'sub2' => 'Embalming by <a href="http://www.promortuary.com/" target="_blank">William Lum</a>'
   )
 );
 

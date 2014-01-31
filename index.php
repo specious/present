@@ -17,7 +17,7 @@
     <div id="about">
       What I do
     </div>
-<?php foreach( $projects as $category => $page ): ?>
+<?php foreach( $gallery as $category => $page ): ?>
     <a href="#<?php echo $category ?>">
       <?php echo ucfirst( $category ) . "\n" ?>
     </a>
@@ -42,15 +42,15 @@
   </ul>
 <?php endif ?>
   <div id="content">
-<?php foreach( $projects as $category => $page ): ?>
+<?php foreach( $gallery as $category => $page ): ?>
     <div id="<?php echo $category ?>" class="page">
-      <h1><?php echo array_shift( $projects[$category] ) ?></h1>
-<?php foreach( $projects[$category] as $p ): ?>
+      <h1><?php echo array_shift( $page ) ?></h1>
+<?php foreach( $page as $p ): ?>
       <div class="project">
         <a href="<?php echo $p['url'] ?>" target="_blank">
-          <img class="cover" src="gfx/cover-placeholder.jpg" data-src="gfx/projects/<?php echo $p['cover'] ?>" alt="<?php echo $p['name'] ?>">
+          <img class="cover" src="gfx/cover-placeholder.jpg" data-src="gfx/gallery/<?php echo $category . '/' . $p['thumb'] ?>" alt="<?php echo $p['name'] ?>">
           <noscript>
-            <img class="cover" src="gfx/projects/<?php echo $p['cover'] ?>" alt="<?php echo $p['name'] ?>">
+            <img class="cover" src="gfx/gallery/<?php echo $category . '/' . $p['thumb'] ?>" alt="<?php echo $p['name'] ?>">
           </noscript>
         </a>
         <div class="info">
@@ -61,19 +61,19 @@
             <?php echo $p['type'] . "\n" ?>
           </p>
           <hr>
-          <p class="job">
-            &#187; <?php echo $p['job'] ?> &#171;
+          <p class="sub1">
+            &#187; <?php echo $p['sub1'] ?> &#171;
           </p>
-          <p class="credits">
-<?php if( $p['credits'] != null ): ?>
-            <?php echo $p['credits'] . "\n" ?>
+          <p class="sub2">
+<?php if( $p['sub2'] != null ): ?>
+            <?php echo $p['sub2'] . "\n" ?>
 <?php else: ?>
             &nbsp;
 <?php endif ?>
           </p>
         </div>
       </div>
-<?php endforeach /* project */ ?>
+<?php endforeach /* gallery item */ ?>
     </div>
 <?php endforeach /* page */ ?>
     <div id="contact" class="page">
