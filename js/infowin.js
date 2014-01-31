@@ -5,7 +5,7 @@
 
 var infoWindowIsOpen = false;
 
-function infoWindowOpen( w, h ) {
+function infoWindowOpen( width ) {
   var win = $('#info-window');
 
   //
@@ -23,7 +23,7 @@ function infoWindowOpen( w, h ) {
   //
   var content = win.find( '.content' );
   content.children('div').hide();
-  content.css( 'bottom', win.css( 'padding-bottom') );
+  content.css( 'bottom', win.css( 'padding-bottom' ) );
   win.css( {
     'position': 'fixed',
     'width': '0',
@@ -36,11 +36,13 @@ function infoWindowOpen( w, h ) {
     'z-index': '5'
   } );
   win.stop( true ).animate(
-    { width: w + 'px', 'margin-left': '-' + (w*0.5) + 'px' }, 600,
+    { width: width + 'px', 'margin-left': '-' + (width*0.5) + 'px' }, 600,
     function() {
       infoWindowIsOpen = true;
-
-      win.animate( { height: h + 'px' }, 600, function() {
+      win.animate( {
+        height: content.height()
+          + parseInt( win.css('padding-bottom') ) + 'px'
+      }, 600, function() {
         closeButton.fadeIn( 200 );
       } );
   } );
@@ -54,13 +56,14 @@ function infoWindowClose() {
   }
 }
 
-function infoShow( file, contentId, w, h, onDone ) {
+function infoShow( file, contentId, width, onDone ) {
   if( infoWindowIsOpen ) {
     infoWindowClose();
     return;
   }
 
-  infoWindowOpen( w, h );
+  infoWindowOpen( width );
+
   var content = $(contentId);
 
   function showContent() {

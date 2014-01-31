@@ -138,7 +138,7 @@
 
 <?php if( $about ): ?>
       $('#about').click( function() {
-        infoShow( 'about.html', '#about-content', 420, 212 )
+        infoShow( 'about.html', '#about-content', 420 )
       } )
 <?php endif ?>
       $('#menu > a').click( function() {
