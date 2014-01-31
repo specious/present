@@ -1,7 +1,6 @@
 /*
  * Ajax pop-up dialog
- *
- * Code by Ildar Sagdejev ( http://www.tknomad.com )
+ *   By Ildar Sagdejev ( http://twitter.com/tknomad )
  */
 
 var infoWindowIsOpen = false;
@@ -10,14 +9,11 @@ function infoWindowOpen( w, h ) {
   var win = $('#info-window');
 
   //
-  // Create the info window if it hasn't been yet
+  // Create the info window if it doesn't exist yet
   //
   if( win.length === 0 ) {
     win = $('<div id="info-window"><div class="content"></div><a class="close" title="Close">ⓧ</a></div>').appendTo('body');
     win.find('.close').click( infoWindowClose );
-  } else {
-    // Enable arrow keys in case they were disabled by the contact form showing
-    arrowKeysEnabled = true;
   }
 
   var closeButton = win.find( '.close' ).css( 'display', 'none' );
@@ -50,17 +46,20 @@ function infoWindowOpen( w, h ) {
   } );
 }
 
-var infoWindowBusy = false;
-
 function infoWindowClose() {
-  if( !infoWindowBusy ) {
+  if( infoWindowIsOpen ) {
     arrowKeysEnabled = true;
-    $('#info-window').stop( true ).fadeOut( 400 );
+    $('#info-window').stop().fadeOut( 400 );
     infoWindowIsOpen = false;
   }
 }
 
 function infoShow( file, contentId, w, h, onDone ) {
+  if( infoWindowIsOpen ) {
+    infoWindowClose();
+    return;
+  }
+
   infoWindowOpen( w, h );
   var content = $(contentId);
 
@@ -87,10 +86,10 @@ function infoShow( file, contentId, w, h, onDone ) {
 
 $(function() {
   // Close dialog when ESC key is pressed
-  $(document).keydown(function(e) {
+  $(document).keydown( function( e ) {
     if( e.keyCode == 27 )
       infoWindowClose();
-  })
+  } );
 
   // Close dialog when clicked outside
   $('body').click( function( e ) {

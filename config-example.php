@@ -7,6 +7,10 @@ $epithet = 'This is what I do';
 $footer  = "Designed and programmed by {$author} &copy; 2014";
 $comment = 'Programming by Ildar Sagdejev ( http://twitter.com/tknomad )';
 
+$about = array(
+  'link' => 'What I do'
+);
+
 $contact = array(
   'title' => 'Hire me!',
   'email' => array(
@@ -108,7 +112,7 @@ $gallery['photos'] = array(
     'type' => 'Transport',
     'thumb' => 'train.jpg',
     'url' => 'http://www.flickr.com/photos/the-specious/5415537575/',
-    'sub1' => '',
+    'sub1' => 'Freight Train',
     'sub2' => 'Canon EOS Rebel XTi'
   ),
   array(

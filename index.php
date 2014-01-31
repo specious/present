@@ -14,9 +14,11 @@
 <body>
   <img id="avatar" src="<?php echo $avatar['image'] ?>" alt="<?php echo $avatar['title'] ?>">
   <div id="menu">
+<?php if( $about ): ?>
     <div id="about">
-      What I do
+      <?php echo $about['link'] . "\n" ?>
     </div>
+<?php endif ?>
 <?php foreach( $gallery as $category => $page ): ?>
     <a href="#<?php echo $category ?>">
       <?php echo ucfirst( $category ) . "\n" ?>
@@ -124,7 +126,7 @@
   </div>
   <script src="js/lib/jquery.js"></script>
   <script src="js/lib/zoomerang.js"></script>
-  <script src="js/info.js"></script>
+  <script src="js/infowin.js"></script>
   <script src="js/contact.js"></script>
   <script>
     $(function() {
@@ -134,9 +136,11 @@
         }, time || 1000 )
       }
 
+<?php if( $about ): ?>
       $('#about').click( function() {
         infoShow( 'about.html', '#about-content', 420, 212 )
       } )
+<?php endif ?>
       $('#menu > a').click( function() {
         scrollTo( $(this).attr('href') )
         return false

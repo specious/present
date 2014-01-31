@@ -23,10 +23,15 @@ Instructions:
 
 * Rename **config-example.php** to **config.php**
 * Edit config.php (it is pretty much self-explanatory)
+* Edit about.html
 * Compile CSS with Stylus: `stylus skins/*/*.styl`
 * Host on a PHP server
 
 *Hint:* if you have PHP 5.4 or later you can test by running in the root directory: `php -S 0.0.0.0:8888`
+
+Advanced:
+
+* [Change](http://xiconeditor.com/) favicon.ico
 
 ## License
 
