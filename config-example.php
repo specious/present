@@ -2,13 +2,13 @@
 
 $skin = 'rouge';
 
-$author  = 'Awesome Dude';
+$author  = 'Awesome, Dude!';
 $epithet = 'This is what I do';
 $footer  = "Designed and programmed by {$author} &copy; 2014";
 $comment = 'Programming by Ildar Sagdejev ( http://twitter.com/tknomad )';
 
 $about = array(
-  'link' => 'What I do'
+  'link' => 'About'
 );
 
 $contact = array(
