@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<?php require( 'config.php' ); ?>
+<?php require( 'config.php' ) ?>
 <head>
 <?php if( $comment ): ?>
   <!--
@@ -159,7 +159,7 @@
         link.removeAttr('title').hover( function() {
           $(caption).stop( true ).css( 'opacity', '1' )
         }, function() {
-          $(caption).fadeTo( 333, 0 );
+          $(caption).fadeTo( 333, 0 )
         } )
       } )
 
