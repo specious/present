@@ -3,11 +3,15 @@ I decided to share the framework that I have developed for showing off my projec
 ## Features
 
 * Responsive design
-* Requires only PHP on the server
+* Requires only PHP on the server (or [serve as static files](#static))
 * Don't need a database
 * Takes advantage of jQuery but usable without JavaScript
 * Generates very clean HTML
 * Skinnable
+
+## Try the [Demo](http://specious.github.io/present/)
+
+<a href="http://specious.github.io/present/"><img src="http://specious.github.io/present/screenshot.png" width="480" alt="screenshot">
 
 ## Mission
 
@@ -32,6 +36,7 @@ Instructions:
 Advanced:
 
 * [Change](http://xiconeditor.com/) favicon.ico
+* <a name="static"></a>Render static page with `php index.php > index.html` to serve quicker and without PHP!
 
 ## License
 
