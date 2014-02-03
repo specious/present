@@ -64,7 +64,7 @@
           </p>
           <hr>
           <p class="sub1">
-            &#187; <?php echo $p['sub1'] ?> &#171;
+            <?php echo $p['sub1'] . "\n" ?>
           </p>
           <p class="sub2">
 <?php if( $p['sub2'] != null ): ?>

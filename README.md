@@ -7,6 +7,7 @@ I decided to share the framework that I have developed for showing off my projec
 * Don't need a database
 * Takes advantage of jQuery but usable without JavaScript
 * Generates very clean HTML
+* Zoomable avatar via [Zoomerang.js](http://yyx990803.github.io/zoomerang/)
 * Skinnable
 
 ## Try the [Demo](http://specious.github.io/present/)
@@ -15,7 +16,7 @@ I decided to share the framework that I have developed for showing off my projec
 
 ## Mission
 
-* To create a *lightweight* portfolio/gallery website with contact form
+* To create a lightweight responsive portfolio/gallery website with contact form
 
 ## Installation
 

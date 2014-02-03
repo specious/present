@@ -6,6 +6,11 @@
 @import 'nib/vendor'
 @import 'nib/gradients'
 
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
 box-shadow()
   -webkit-box-shadow arguments
   -moz-box-shadow arguments
@@ -215,6 +220,10 @@ a
     .sub1
       color #4ce21d
       font-size 20px
+      &:before
+        content '» '
+      &:after
+        content ' «'
     .sub2
       color #9effd1
       font-size 18px
