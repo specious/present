@@ -50,7 +50,7 @@
 <?php foreach( $page as $p ): ?>
       <div class="project">
         <a href="<?php echo $p['url'] ?>" target="_blank">
-          <img class="cover" src="gfx/cover-placeholder.jpg" data-src="gfx/gallery/<?php echo $category . '/' . $p['thumb'] ?>" alt="<?php echo $p['name'] ?>">
+          <img class="cover lazy" src="gfx/cover-placeholder.jpg" data-src="gfx/gallery/<?php echo $category . '/' . $p['thumb'] ?>" alt="<?php echo $p['name'] ?>">
           <noscript>
             <img class="cover" src="gfx/gallery/<?php echo $category . '/' . $p['thumb'] ?>" alt="<?php echo $p['name'] ?>">
           </noscript>
@@ -124,6 +124,9 @@
       <?php echo $footer . "\n" ?>
     </p>
   </div>
+  <noscript>
+    <style>.lazy { visibility: hidden; height: 0; }</style>
+  </noscript>
   <script src="js/lib/jquery.js"></script>
   <script src="js/lib/zoomerang.js"></script>
   <script src="js/infowin.js"></script>
@@ -196,10 +199,10 @@
       }
 
       // First page first
-      loadImages( ".page:first .cover" )
+      loadImages( ".page:first .lazy" )
 
       $(window).load( function() {
-        loadImages( ".cover" )
+        loadImages( ".lazy" )
       } )
     })
   </script>
