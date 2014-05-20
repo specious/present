@@ -1,18 +1,20 @@
-I decided to share the framework that I have developed for showing off my project portfolio.
+This is a minimal and completely skinnable framework to share your creative portfolio on the web written in PHP, HTML, Stylus and JavaScript.
 
 ## Features
 
-* Responsive design
-* Requires only PHP on the server (or [serve as static files](#static))
-* Don't need a database
-* Takes advantage of jQuery but usable without JavaScript
-* Generates very clean HTML
+* Responsive
+* Requires only PHP on the server (you can serve index page as a [static file](#static))
+* No database required
+* Takes advantage of jQuery (but still usable with no JavaScript)
+* Very clean HTML
 * Zoomable avatar via [Zoomerang.js](http://yyx990803.github.io/zoomerang/)
-* Skinnable
+* Entirely skinnable
 
 ## Try the [Demo](http://specious.github.io/present/)
 
-<a href="http://specious.github.io/present/"><img src="http://specious.github.io/present/screenshot.png" width="480" alt="screenshot">
+<a href="http://specious.github.io/present/">
+  <img src="http://specious.github.io/present/screenshot.png" width="480" alt="screenshot">
+</a>
 
 ## Mission
 
@@ -41,4 +43,4 @@ Advanced:
 
 ## License
 
-MIT
+[MIT](http://opensource.org/licenses/MIT)

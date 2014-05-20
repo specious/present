@@ -1,5 +1,4 @@
 <?php
-
 require( 'config.php' );
 
 if( !isset($_POST) )
@@ -41,7 +40,7 @@ if( empty($email) ) {
   $errors[] = 'You have not entered a valid email address';
 }
 
-if( empty($message) ){
+if( empty($message) ) {
   $valid = false;
   $errors[] = 'You have not entered a message';
 }
@@ -71,5 +70,4 @@ EOM;
 //
 if( empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest' )
   header('location: ' . $_SERVER['HTTP_REFERER']);
-
 ?>
