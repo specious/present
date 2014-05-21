@@ -3,7 +3,7 @@
 $skin = 'rouge';
 
 $author  = 'Awesome, Dude!';
-$epithet = 'This is what I do';
+$tagline = 'This is what I do';
 $footer  = "Designed and programmed by {$author} &copy; 2014";
 $comment = 'Programming by Ildar Sagdejev ( http://twitter.com/tknomad )';
 

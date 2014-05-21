@@ -8,7 +8,7 @@
   -->
 <?php endif ?>
   <meta charset="UTF-8">
-  <title><?php echo $author ?> - <?php echo $epithet ?></title>
+  <title><?php echo $author ?> - <?php echo $tagline ?></title>
   <link rel="stylesheet" href="skins/<?php echo $skin ?>/main.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
   </div>
   <div id="header">
     <h1><?php echo $author ?></h1>
-    <h2><?php echo ucwords( $epithet ) ?></h2>
+    <h2><?php echo $tagline ?></h2>
   </div>
 <?php if( $links ): ?>
   <ul id="links">
