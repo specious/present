@@ -24,14 +24,14 @@ This is a minimal and completely skinnable framework to share your creative port
 
 You will need:
 
-* [Stylus](http://learnboost.github.io/stylus/)
+* [Stylus](http://learnboost.github.io/stylus/) and [nib](http://visionmedia.github.io/nib/)
 
 Instructions:
 
 * Rename **config-example.php** to **config.php**
 * Edit config.php (it is pretty much self-explanatory)
 * Edit about.html
-* Compile CSS with Stylus: `stylus skins/*/*.styl`
+* Compile CSS with Stylus: `stylus -u nib skins/*/*.styl`
 * Host on a PHP server
 
 *Hint:* if you have PHP 5.4 or later you can test by running in the root directory: `php -S 0.0.0.0:8888`
