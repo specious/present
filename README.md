@@ -1,45 +1,43 @@
-This is a minimal and completely skinnable framework to share your creative portfolio on the web written in PHP, HTML, Stylus and JavaScript.
+# Presént
+
+Responsive portfolio gallery with contact form. Written in PHP, HTML, Stylus and JavaScript.
 
 ## Features
 
-* Responsive
-* Requires only PHP on the server (you can serve index page as a [static file](#static))
-* No database required
-* Takes advantage of jQuery (but still usable with no JavaScript)
-* Very clean HTML
+* Responsive design
+* Modular skins
+* Requires nothing but PHP on the server (index page can be rendered once and served as a [static file](#static))
+* No database
+* Takes advantage of jQuery (still usable without JavaScript)
+* Well formatted HTML
 * Zoomable avatar via [Zoomerang.js](http://yyx990803.github.io/zoomerang/)
-* Entirely skinnable
 
-## Try the [Demo](http://specious.github.io/present/)
+## [Demo](http://specious.github.io/present/) or it didn't happen
 
 <a href="http://specious.github.io/present/">
   <img src="http://specious.github.io/present/screenshot.png" width="480" alt="screenshot">
 </a>
 
-## Mission
-
-* To create a lightweight responsive portfolio/gallery website with contact form
-
 ## Installation
 
 You will need:
 
-* [Stylus](http://learnboost.github.io/stylus/) and [nib](http://visionmedia.github.io/nib/)
+* [Stylus](http://stylus-lang.com/) with [nib](https://tj.github.io/nib/) extensions
 
 Instructions:
 
 * Rename **config-example.php** to **config.php**
 * Edit config.php (it is pretty much self-explanatory)
 * Edit about.html
-* Compile CSS with Stylus: `stylus -u nib skins/*/*.styl`
+* Compile Stylus to CSS: `stylus -u nib skins/*/*.styl`
 * Host on a PHP server
 
-*Hint:* if you have PHP 5.4 or later you can test by running in the root directory: `php -S 0.0.0.0:8888`
+If you have PHP 5.4 or later you can start a local server by running: `php -S 0.0.0.0:8888`
 
 Advanced:
 
 * [Change](http://xiconeditor.com/) favicon.ico
-* <a name="static"></a>Render static page with `php index.php > index.html` to serve quicker and without PHP!
+* <a name="static"></a>Render a static page with `php index.php > index.html` to serve quicker and without invoking the PHP interpreter
 
 ## License
 
